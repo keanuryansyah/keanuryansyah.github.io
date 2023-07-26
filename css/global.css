@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --headfont: 'Dancing Script', cursive;
+    --paraphfont: 'poppins', sans-serif;
+}
+
+body {
+    height: 3000px;
+}
+
+section {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+h1 {
+    font-family: var(--headfont);
+    font-size: 4em;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: var(--headfont);
+    font-size: 2.6em;
+    font-family: 400;
+}
+
+h3 {
+    font-family: var(--headfont);
+    font-size: 1.8em;
+}
+
+h4 {
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+p,
+a {
+    font-size: 1em;
+    font-family: var(--paraphfont);
+}

@@ -1,0 +1,598 @@
+#heroSection {
+    width: 100%;
+    background-image: url("image/fixedBg4.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-attachment: fixed;
+    z-index: 5;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#heroSection::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: -1;
+}
+
+.fixedRoot {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partnerName {
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    gap: 2rem;
+}
+
+.bridePicture {
+    width: 75%;
+    height: 50%;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    border: 1px solid #fff;
+}
+
+.bridePicture::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 22px;
+    left: 22px;
+    border: 1px solid #fff;
+    z-index: -1;
+}
+
+.bridePicture::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -22px;
+    right: 22px;
+    border: 1px solid #fff;
+    z-index: -1;
+}
+
+.bridePicture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.fixedRoot h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+}
+
+.bridePicture img.show {
+    opacity: 1;
+}
+
+.scroll {
+    fill: #ecb42f;
+    font-size: 1.4em;
+    animation: 2s linear infinite;
+    -webkit-animation: 1.5s scroll linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+
+50% {
+    transform: translateY(20%);
+    -webkit-transform: translateY(20%);
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    -o-transform: translateY(20%);
+}
+
+100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+}
+
+.gift {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    fill: #fff;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    cursor: pointer;
+    border: 2px solid #ecb42f;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    z-index: 9999;
+}
+
+.gift:hover {
+    background: #ecb42f;
+    border: none;
+    fill: #333;
+}
+
+.textGift {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: #000;
+    top: 110px;
+    right: 110px;
+    position: fixed;
+    z-index: 99999;
+    border: 1px solid #fff;
+    box-shadow: -4px 4px 1px grey;
+}
+
+
+.textGift p {
+    font-size: .8em;
+}
+
+.closeTextGift {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+    width: 35px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .3rem;
+    cursor: pointer;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    font-family: 'poppins', sans-serif;
+}
+
+.closeTextGift:hover {
+    background: red;
+}
+
+.closeTextGift::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: whitesmoke;
+    z-index: -1;
+    right: -3px;
+    top: -3px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+/* MAIN CONTENT */
+
+#mainSection {
+    width: 100%;
+    background-image: url("image/introBg2.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+}
+
+#mainSection::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, .8);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.mainCtn {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    padding: 0 1rem;
+}
+
+
+.topMainCtn {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+
+.topMainCtn h2 {
+    font-family: 'poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ecb42f;
+    display: flex;
+    justify-content: center;
+}
+
+.topMainCtn h3 {
+    font-size: 3.4em;
+}
+
+.countdownTime {
+    display: flex;
+}
+
+.gb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .3rem;
+    font-size: 1em;
+    width: 50px;
+    font-family: 'poppins', sans-serif;
+    letter-spacing: 2px;
+}
+
+.gb .time {
+    font-size: 12px;
+    color: #ecb42f;
+    font-family: 'poppins', sans-serif;
+}
+
+.introBottomCtn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.topBtmCtn {
+    display: flex;
+    gap: 3rem;
+}
+
+.intBtm {
+    font-size: 1.1em;
+
+}
+
+.btmCtn {
+    font-size: 2em;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.saveCalender {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    font-family: 'poppins', sans-serif;
+    fill: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.saveCalender a {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.saveCalender:hover {
+    background: rgba(0, 0, 0, .4);
+}
+
+.saveCalender span {
+    display: flex;
+    align-items: center;
+}
+
+/* QUOTES BOX */
+
+#quoteSection {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    background: whitesmoke;
+}
+
+.quotesBox {
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.quotesTitle {
+    position: relative;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.quotesBox h2::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+
+.quotesBox::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    right: 0;
+    top: -40px;
+    z-index: -1;
+    display: none;
+}
+
+/* PARTNER PROFILE */
+
+.partnerProfile {
+    width: 100%;
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 5rem 1rem;
+}
+
+.theBride {
+    width: 100%;
+    height: 50%;
+}
+
+.brideImage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.brideImage::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background: transparent;
+    top: -40px;
+    right: 150px;
+    z-index: -1;
+    border: 1px solid #ecb42f;
+}
+
+.brideImage::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background: transparent;
+    top: -20px;
+    right: 200px;
+    z-index: -1;
+    border: 1px solid #ecb42f;
+}
+
+
+.brideImage img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+
+.theBrideText {
+    padding-left: 1rem;
+    font-size: 1.6em;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+/* WELCOME POP */
+.popUpBox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    background-image: url("image/fixedBg.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transition: .8s;
+    -webkit-transition: .8s;
+    -moz-transition: .8s;
+    -ms-transition: .8s;
+    -o-transition: .8s;
+}
+
+.popUpBox.show {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    background-image: url("image/fixedBg.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+.popUpBox::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    z-index: -1;
+
+}
+
+.popUpBoxCtn {
+    width: 65%;
+    padding: 5em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgb(255, 255, 255, .1);
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+
+.titlePopUp {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+.titlePopUp::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+}
+
+.titlePopUp h2 {
+    font-size: 1.7em;
+}
+
+.popUpBoxCtn h3 {
+    width: 60%;
+    letter-spacing: 1px;
+    font-size: 2.8em;
+    line-height: 1.4;
+    color: #ecb42f;
+}
+
+.popUpBoxCtn p {
+    color: #fff;
+}
+
+.buttonInv {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    fill: #fff;
+    color: #fff;
+    font-size: 1.1em;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.buttonInv:hover {
+    background: rgba(0, 0, 0, .4);
+}
